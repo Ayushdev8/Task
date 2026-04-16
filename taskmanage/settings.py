@@ -105,7 +105,7 @@ else:
     DATABASES = {
             'default': {
                 "ENGINE": 'django.db.backends.mysql',
-                "NAME": "taskmanager",
+                "NAME": "taskmanagerdb",
                 "USER": "myuser",
                 "PASSWORD": "AYUSHjha8851",
                 "HOST": "localhost",
