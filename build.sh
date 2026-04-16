@@ -5,5 +5,4 @@ pip install -r requirements.txt
 
 python manage.py makemigrations
 python manage.py migrate
-python superuser.py
 python manage.py collectstatic --noinput
