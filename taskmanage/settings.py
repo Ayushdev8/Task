@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-dung@^0jn)c=yxp3w75c(e%fpuh9jk&3tlxe2j5c@vnvl8xea3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['taskmanager-eyhq.onrender.com']
 
 
 # Application definition
@@ -61,8 +61,10 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # React development server
-    "http://localhost:8080",  # Vue development server
+    # "http://localhost:5173",  # React development server
+    # "http://localhost:8080",  # Vue development server
+
+    "https://taskmanagerfront-eight.vercel.app",
     
       
 ]
