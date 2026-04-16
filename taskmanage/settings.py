@@ -162,7 +162,7 @@ STORAGES = {
 
 # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = 'accounts.UserAccount'
+AUTH_USER_MODEL = 'accounts.UserModel'
 
 # to add manually jwt tokens
 REST_FRAMEWORK = {

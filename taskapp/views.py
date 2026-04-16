@@ -8,7 +8,7 @@ from rest_framework import generics,status
 from django.shortcuts import get_object_or_404
 
 from .models import AddTask
-from accounts.models import UserAccount
+from accounts.models import UserModel
 
 # Create your views here.
 

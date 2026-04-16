@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import UserAccount
+from .models import UserModel
 
 # Register your models here.
-class UserAcountAdmin(UserAdmin):
+class UserModelAdmin(UserAdmin):
     list_display = ['id','email','first_name','username','last_login','date_joined']
     list_display_links =['first_name','email']
     readonly_fields = ('last_login','date_joined',)
@@ -26,4 +26,4 @@ class UserAcountAdmin(UserAdmin):
          })
     ]
 
-admin.site.register(UserAccount,UserAcountAdmin)
+admin.site.register(UserModel,UserModelAdmin)

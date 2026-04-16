@@ -1,11 +1,11 @@
-from accounts.models import UserAccount
+from accounts.models import UserModel
 from .models import AddTask 
 from rest_framework import serializers
 
 class RegisterSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(write_only=True)
     class Meta:
-        model = UserAccount
+        model = UserModel
         fields = [
             'first_name',
             'last_name',
@@ -29,7 +29,7 @@ class RegisterSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         validated_data.pop('password2')
 
-        user = UserAccount.objects.create_user(
+        user = UserModel.objects.create_user(
             first_name=validated_data['first_name'],
             last_name=validated_data['last_name'],
             username=validated_data['username'],
@@ -51,7 +51,7 @@ class AddTaskSerializer(serializers.ModelSerializer):
 
 class UserDetailSerializer(serializers.ModelSerializer):
     class Meta:
-        model = UserAccount
+        model = UserModel
         fields = ['id', 'first_name', 'last_name', 'username', 'email']
 
 
