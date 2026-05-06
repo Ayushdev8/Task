@@ -1,6 +1,7 @@
 from accounts.models import UserModel
 from .models import AddTask 
 from rest_framework import serializers
+from utils import send_confirmation_email
 
 class RegisterSerializer(serializers.ModelSerializer):
     password2 = serializers.CharField(write_only=True)
@@ -39,6 +40,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
         )
         user.save()
+        send_confirmation_email(user)
         
         return user
     

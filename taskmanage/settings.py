@@ -178,3 +178,11 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60)
 }
+
+ANYMAIL = {
+  "MAILTRAP_API_TOKEN": config('MAILTRAP_API_TOKEN'),
+}
+EMAIL_BACKEND = "anymail.backends.mailtrap.EmailBackend"
+DEFAULT_FROM_EMAIL = "hello@taskmanagerfront-eight.vercel.app"
+
+MAILTRAP_TEMPLATE_UUID=config('MAILTRAP_TEMPLATE_UUID')
